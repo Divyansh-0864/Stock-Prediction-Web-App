@@ -52,8 +52,7 @@ scikit-learn==1.5.2
 scipy==1.14.1
 seaborn==0.13.2
 six==1.16.0
-# Editable Git install with no remote (Stock-Price-Predictor==0.0.1)
--e c:\academics\data science\stock price prediction\web app
+streamlit==1.25.0
 tensorboard==2.17.1
 tensorboard-data-server==0.7.2
 tensorflow==2.17.0
