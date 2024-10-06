@@ -15,8 +15,8 @@ PRETRAINED_MODEL_DIR = 'artifacts'
 
 # Route for the home page
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 
 @app.route('/predictdata', methods=['GET', 'POST'])
@@ -47,7 +47,7 @@ def predict_datapoint():
             results = predict_pipeline.predict_next_day(symbol=ticker, model_type=model_name)
 
             logging.info(f"Prediction results: {results}")
-            return render_template('index.html', results=results)
+            return render_template('home.html', results=results)
 
         else:
             # Model does not exist, train the model first
@@ -69,11 +69,11 @@ def predict_datapoint():
                 results = predict_pipeline.predict_next_day(symbol=ticker, model_type=model_name)
 
                 logging.info(f"Prediction results after training: {results}")
-                return render_template('index.html', results=results[0], message="Model training complete. Prediction complete.")
+                return render_template('home.html', results=results[0], message="Model training complete. Prediction complete.")
 
             except Exception as e:
                 logging.error(f"Error during training: {e}", exc_info=True)
-                return render_template('index.html', message=f"Error in prediction for {ticker}. Please try again later.")
+                return render_template('home.html', message=f"Error in prediction for {ticker}. Please try again later.")
 
 
 if __name__ == "__main__":
