@@ -6,8 +6,8 @@ from src.pipeline.train_pipeline import TrainPipeline
 import os
 from src.logger import logging
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
+app = app
 
 # Directory to store pre-trained models
 PRETRAINED_MODEL_DIR = 'artifacts'
