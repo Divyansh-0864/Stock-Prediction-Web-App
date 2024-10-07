@@ -25,6 +25,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+artifacts/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -50,11 +51,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-<<<<<<< HEAD
 logs/
-=======
-
->>>>>>> origin/main
 # Translations
 *.mo
 *.pot
@@ -64,6 +61,7 @@ logs/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+logs/
 
 # Flask stuff:
 instance/
@@ -133,6 +131,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+myenv/
 
 # Spyder project settings
 .spyderproject

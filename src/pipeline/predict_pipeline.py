@@ -99,7 +99,7 @@ class CustomData:
         
 if __name__ == "__main__":
     model = "LSTM"
-    symbol = "AAPL"
+    symbol = "GOOG"
     obj = PredictPipeline()
     price = obj.predict_next_day(symbol=symbol, model_type=model)
     print(price)

@@ -31,7 +31,7 @@ class TrainPipeline:
         """
         try:
             logging.info("Starting data transformation.")
-            data_transformation = DataTransformation()
+            data_transformation = DataTransformation(symbol=symbol)
             x_train, y_train, x_test, y_test,preprocessor_path = data_transformation.initiate_data_transformation(
                 train_path=train_data_path,
                 test_path=test_data_path,

@@ -127,7 +127,7 @@ if __name__ == "__main__":
     # obj = DataIngestion()
     # obj.initiate_data_ingestion()
 
-    symbol = 'AMZN'
+    symbol = 'GOOG'
     model_type = 'LSTM'
 
     # Check for data_transformation

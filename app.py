@@ -14,7 +14,7 @@ PRETRAINED_MODEL_DIR = 'artifacts'
 
 
 # Route for the home page
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('home.html')
 
