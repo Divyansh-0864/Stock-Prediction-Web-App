@@ -40,7 +40,6 @@ class PredictPipeline:
             # Fetch historical data
             custom_data = CustomData(ticker=symbol, model_name=model_type)
             last_60_days_df = custom_data.get_data_as_data_frame()
-            print(last_60_days_df)
             
             # Check if the model exists or needs to be trained dynamically
             if symbol not in self.pretrained_models or not self.check_model_existence(symbol, model_type):
@@ -61,7 +60,6 @@ class PredictPipeline:
 
             # Predict the next day's price
             next_day_prediction = model.predict(x_next_day)
-            print(next_day_prediction)
 
             # Inverse transform the predicted value to original scale
             next_day_prediction = scaler.inverse_transform(next_day_prediction)
