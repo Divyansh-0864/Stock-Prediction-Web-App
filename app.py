@@ -7,7 +7,6 @@ import os
 from src.logger import logging
 
 app = Flask(__name__)
-app = app
 
 # Directory to store pre-trained models
 PRETRAINED_MODEL_DIR = 'artifacts'
